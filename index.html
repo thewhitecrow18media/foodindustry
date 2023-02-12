@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>White Crow</title>
+  <meta name="description"
+    content="This is a free Bootstrap landing page theme created for BootstrapZero. Feature video background and one page design." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Codeply">
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/animate.min.css" />
+  <link rel="stylesheet" href="./css/ionicons.min.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+  <style>
+    body {
+      background-color: black;
+    }
+
+    .swiper {
+      width: 350px;
+      height: 450px;
+
+      left: 50%;
+      top: 50%;
+      margin: auto;
+    }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+    }
+
+    .swiper-button-next {
+      background-image: url('images/next_.png');
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-position: center;
+      width: 20px;
+      height: 25px;
+      box-shadow: 0 0 5px rgb(248, 247, 247);
+
+    }
+
+    .swiper-button-next::after {
+      display: none;
+    }
+
+    .swiper-button-prev {
+
+      background-image: url('images/back_.png');
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-position: center;
+      width: 20px;
+      height: 25px;
+      box-shadow: 0 0 5px rgb(248, 247, 247);
+
+    }
+
+    .swiper-button-prev::after {
+      display: none;
+    }
+
+    .socialswa {
+      width: 100px;
+      height: 50px;
+      /*background-color: #e46c0a;*/
+      border-radius: 30px 0 0 30px;
+      position: fixed;
+      right: 0;
+      bottom: 15px;
+      z-index: 20;
+    }
+
+    .myBtn {
+      padding: 0;
+      list-style-type: none;
+      align-items: center;
+    }
+
+    .box {
+      background: white;
+      color: rgb(9, 9, 9);
+      --width: 300px;
+      margin-bottom: 20px;
+      --height: calc(var(--width) / 5);
+      width: var(--width);
+      height: var(--height);
+      text-align: center;
+      align-items: center;
+      line-height: 10px;
+      font-size: 10px;
+      font-family: sans-serif;
+      letter-spacing: 0.2em;
+      border: 1px solid rgb(31, 31, 29);
+      border-radius: 2em;
+      animation: myanim 3s infinite;
+      transform: perspective(500px) rotateY(-15deg);
+      text-shadow: 6px 3px 2px rgba(0, 0, 0, 0.2);
+      box-shadow: 2px 0 0 5px rgba(0, 0, 0, 0.2);
+      transition: 0.5s;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    @keyframes myanim {
+      30% {
+        transform: perspective(500px) rotateY(35deg);
+      }
+
+      60% {
+        transform: perspective(500px) rotateY(-35deg);
+      }
+
+
+    }
+
+    .box:hover {
+      transform: perspective(500px) rotateY(15deg);
+      text-shadow: -6px 3px 2px rgba(0, 0, 0, 0.2);
+      box-shadow: -2px 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+
+
+    .box::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: white;
+      left: -100%;
+      transition: 0.5s;
+    }
+
+    .box:hover::before {
+      left: 100%;
+    }
+
+    .imgsize {
+      width: 65px;
+      height: 65px;
+
+      float: left;
+    }
+
+    .logo-img {
+      width: 250px;
+      height: 80px;
+      /* border-color: black white black white; */
+      /* box-shadow: rgba(0,0,0,0.8) 0px 0px 10px; */
+      /* box-shadow: 0 0 15px rgba(209, 234, 234, 0.8); */
+      /* filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.8));   */
+
+      padding: 8px;
+    }
+
+    .block {
+      position: relative;
+      margin-left: 20%;
+      /* margin: 300px auto 0; */
+      width: 255px;
+      height: 85px;
+      background: linear-gradient(0deg, #000, #090909);
+    }
+
+    .block:before,
+    .block:after {
+      content: '';
+      position: absolute;
+      left: -2px;
+      top: -2px;
+      background: linear-gradient(45deg, #4c4949, #efeff3, #e2d8d8, #f3f3ef, #e8e5e5, #9c979c,
+          #efeff2, #625f5f, #f7f7f4, #878383);
+      background-size: 400%;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      z-index: -1;
+      animation: steam 20s linear infinite;
+    }
+
+    @keyframes steam {
+      0% {
+        background-position: 0 0;
+      }
+
+      50% {
+        background-position: 400% 0;
+      }
+
+      100% {
+        background-position: 0 0;
+      }
+    }
+
+    .block:after {
+      filter: blur(50px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="socialswa">
+    call us
+    <a href="tel:919325715692">
+      <img style="width: 30%;" src="images/call.png" alt="">
+    </a>
+
+
+  </div>
+  <header id="first"><br><br>
+    <div class="header-content">
+      <br>
+      <div class="inner">
+        <div class="block" style="display: flex;align-items: center;justify-content: center;">
+          <img class="logo-img" src="images/logo.jpeg" alt="">
+        </div>
+
+        <br><br>
+        <h4><u>HOTEL PORTFOLIO</u> </h4>
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/downimages/002.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/003.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/004.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/005.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/006.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/007.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/008.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/009.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/010.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/011.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/012.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/013.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/014.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/015.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/016.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/017.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/018.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/019.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/020.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/021.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/022.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/023.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/024.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/025.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/026.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/027.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/028.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/029.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/030.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/031.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/032.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/033.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/034.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/035.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/036.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/037.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/038.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/039.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/040.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/041.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/042.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/043.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/044.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/045.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/046.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/047.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/048.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/049.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/downimages/050.jpg" />
+            </div>
+
+
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </header>
+
+
+  <!--scripts loaded here -->
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/jquery.easing.min.js"></script>
+  <script src="./js/wow.js"></script>
+  <script src="./js/scripts.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "cube",
+      grabCursor: true,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      cubeEffect: {
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      //   pagination: {
+      //     el: ".swiper-pagination",
+      //   },
+    });
+  </script>
+</body>
+
+</html>
